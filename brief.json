@@ -1,0 +1,290 @@
+{
+  "run_id": "run-1781223829415",
+  "job_index": 3,
+  "params": {
+    "owner_user_id": "user-1774825923424-663",
+    "owner_username": "inso",
+    "owner_display_name": "Inso",
+    "count": 3,
+    "archetype": "tool",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Permet aux clients exigeants de faire un choix éclairé parmi les différentes offres de conciergerie haut de g…",
+    "notes": "Comparez les forfaits et les services offerts par les conciergeries de luxe en France.\nMet en avant les différences de coûts, de prestations incluses, de zones de couverture et de spécialités.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "",
+    "network_hosting_pool": "",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "provider_space_id": "new-sites",
+    "provider_space_name": "New Sites",
+    "allow_url_fallback": false,
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": false,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "tool",
+    "archetype_mix": [
+      "tool"
+    ],
+    "forced_design_theme": "velvet-luxe",
+    "forced_structure_preset": "quick-compare-strip",
+    "site_idea_title": "Outil d'Analyse Comparative des Services de Conciergerie de Luxe",
+    "site_idea_summary": "Comparez les forfaits et les services offerts par les conciergeries de luxe en France."
+  },
+  "site_spec": {
+    "slug": "outil-d-analyse-comparative-des-services-de-con-b15a5928",
+    "theme": {
+      "name": "Velvet Luxe",
+      "slug": "velvet-luxe",
+      "eyebrow": "Boutique Precision",
+      "family": "velvet-luxe",
+      "moods": [
+        "luxury",
+        "dark",
+        "refined",
+        "premium"
+      ],
+      "archetypes": [
+        "calculator",
+        "generator",
+        "tool"
+      ],
+      "niches": [
+        "luxury services",
+        "legal",
+        "consulting",
+        "high-end property",
+        "finance"
+      ],
+      "keywords": [
+        "boutique",
+        "premium",
+        "velvet",
+        "luxury",
+        "refined"
+      ],
+      "token_index": [
+        "boutique",
+        "calculator",
+        "consulting",
+        "dark",
+        "end",
+        "finance",
+        "generator",
+        "high",
+        "legal",
+        "luxe",
+        "luxury",
+        "precision",
+        "premium",
+        "property",
+        "refined",
+        "services",
+        "tool",
+        "velvet"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap",
+      "display_font": "\"Cormorant Garamond\", serif",
+      "body_font": "\"Sora\", sans-serif",
+      "layout": "editorial",
+      "card_style": "glass",
+      "button_style": "outline",
+      "decor_style": "ribbons",
+      "hero_template": "1fr",
+      "seo_template": "1fr",
+      "feature_columns": 2,
+      "faq_columns": 2,
+      "hero_min_height": "70vh",
+      "panel_radius": "28px",
+      "card_radius": "26px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "16px",
+      "palette": {
+        "bg": "linear-gradient(160deg, #120b1b 0%, #24103a 46%, #0f172a 100%)",
+        "surface": "rgba(20, 12, 30, 0.82)",
+        "surface_border": "rgba(245,208,254,0.14)",
+        "text": "#f8f2ff",
+        "muted": "#d8c7f0",
+        "accent": "#f5d0fe",
+        "accent_alt": "#f59e0b",
+        "hero_glow": "rgba(245, 208, 254, 0.18)",
+        "button_text": "#24103a",
+        "panel_alt": "rgba(255,255,255,0.04)",
+        "shadow": "0 30px 96px rgba(6, 4, 10, 0.4)",
+        "input_fill": "rgba(255,255,255,0.04)"
+      }
+    },
+    "structure": {
+      "name": "Quick Compare Strip",
+      "slug": "quick-compare-strip",
+      "hero_variant": "tool-first",
+      "proof_variant": "metrics",
+      "section_order": [
+        "proof",
+        "features",
+        "faq",
+        "seo"
+      ],
+      "feature_columns": 3,
+      "faq_columns": 2,
+      "family": "compare-strip",
+      "moods": [
+        "direct",
+        "fast",
+        "comparison"
+      ],
+      "archetypes": [
+        "calculator",
+        "tool"
+      ],
+      "niches": [
+        "insurance",
+        "finance",
+        "quotes",
+        "switching"
+      ],
+      "keywords": [
+        "compare",
+        "choices",
+        "fast",
+        "matrix"
+      ],
+      "token_index": [
+        "calculator",
+        "choices",
+        "compare",
+        "comparison",
+        "direct",
+        "faq",
+        "fast",
+        "features",
+        "finance",
+        "first",
+        "insurance",
+        "matrix",
+        "metrics",
+        "proof",
+        "quick",
+        "quotes",
+        "seo",
+        "strip",
+        "switching",
+        "tool"
+      ]
+    },
+    "render_direction": "editorial-ledger",
+    "render_direction_name": "Editorial Ledger",
+    "page_blueprint": "magazine-fold",
+    "page_blueprint_name": "Magazine Fold",
+    "title": "Outil d'Analyse Comparative des Services de Conciergerie de Luxe",
+    "tagline": "Comparez les Services de Conciergerie de Luxe",
+    "description": "Comparez les forfaits et les services offerts par les conciergeries de luxe en France pour faire un choix éclairé.",
+    "feature_prefix": "Bloc",
+    "action": "Utiliser l'outil",
+    "cta_primary": "Analyser les Offres",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "primary",
+        "label": "Texte ou besoin",
+        "type": "text",
+        "placeholder": "Votre besoin principal",
+        "weight": 1.0
+      },
+      {
+        "id": "context",
+        "label": "Contexte",
+        "type": "text",
+        "placeholder": "Situation ou objectif",
+        "weight": 1.0
+      },
+      {
+        "id": "scope",
+        "label": "Intensité",
+        "type": "number",
+        "placeholder": "3",
+        "weight": 0.3
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Editorial Ledger",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Résultat recommandé",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Editorial Ledger",
+      "Analyser les Offres",
+      "Résultat recommandé",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Résultat recommandé",
+    "result_unit": "",
+    "runtime_mode": "analysis_tool",
+    "page_variant": "editorial",
+    "faq_topic": "Outil d'Analyse Comparative des Services de Conciergerie de Luxe",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Outil d'Analyse Comparative des Services de Conciergerie de Luxe ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Outil d'Analyse Comparative des Services de Conciergerie de Luxe et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Outil d&#x27;Analyse Comparative des Services de Conciergerie de Luxe | Comparez les Services de Conciergerie de Luxe</title>\n    <meta name=\"description\" content=\"Comparez les forfaits et les services offerts par les conciergeries de luxe en France pour faire un choix éclairé.\">\n    <style>\n        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');\n\n        :root {\n            --dark-velvet: #2a2a2a;\n            --gold-accent: #b8860b;\n            --light-cream: #f8f8f8;\n            --matte-gray: #e0e0e0;\n            --text-color: #333;\n            --shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.1);\n        }\n\n        body {\n            font-family: 'Roboto', sans-serif;\n            color: var(--text-color);\n            line-height: 1.6;\n            margin: 0;\n            padding: 0;\n            background-color: var(--light-cream);\n            display: flex;\n            flex-direction: column;\n            min-height: 100vh;\n        }\n\n        header {\n            background-color: var(--dark-velvet);\n            color: var(--light-cream);\n            padding: 2.5rem 5%;\n            text-align: center;\n            box-shadow: var(--shadow-subtle);\n        }\n\n        header h1 {\n            font-family: 'Playfair Display', serif;\n            font-size: 3.5rem;\n            color: var(--gold-accent);\n            margin-bottom: 0.5rem;\n            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n        }\n\n        header p {\n            font-size: 1.3rem;\n            max-width: 800px;\n            margin: 0 auto;\n            color: var(--matte-gray);\n        }\n\n        .container {\n            max-width: 1200px;\n            margin: 2rem auto;\n            padding: 0 2%;\n            flex-grow: 1;\n        }\n\n        section {\n            background-color: #fff;\n            padding: 2.5rem;\n            margin-bottom: 2rem;\n            border-radius: 8px;\n            box-shadow: var(--shadow-subtle);\n            border: 1px solid var(--matte-gray);\n        }\n\n        h2 {\n            font-family: 'Playfair Display', serif;\n            color: var(--dark-velvet);\n            font-size: 2.5rem;\n            text-align: center;\n            margin-bottom: 2rem;\n            position: relative;\n            padding-bottom: 10px;\n        }\n\n        h2::after {\n            content: '';\n            position: absolute;\n            left: 50%;\n            bottom: 0;\n            transform: translateX(-50%);\n            width: 80px;\n            height: 3px;\n            background-color: var(--gold-accent);\n        }\n\n        .tool-section {\n            background-color: var(--dark-velvet);\n            color: var(--light-cream);\n            padding: 3rem 2.5rem;\n            border-radius: 8px;\n            box-shadow: var(--shadow-subtle);\n        }\n\n        .tool-section h2 {\n            color: var(--gold-accent);\n        }\n\n        form {\n            display: grid;\n            gap: 1.5rem;\n            max-width: 800px;\n            margin: 0 auto;\n        }\n\n        .form-group {\n            display: flex;\n            flex-direction: column;\n        }\n\n        label {\n            margin-bottom: 0.5rem;\n            font-weight: bold;\n            color: var(--matte-gray);\n            font-size: 1.1rem;\n        }\n\n        input[type=\"number\"],\n        select,\n        textarea {\n            padding: 12px 15px;\n            border: 1px solid #555;\n            border-radius: 5px;\n            font-size: 1rem;\n            background-color: #3a3a3a;\n            color: var(--light-cream);\n            box-sizing: border-box;\n            width: 100%;\n        }\n\n        input[type=\"number\"]::placeholder,\n        textarea::placeholder {\n            color: #ccc;\n        }\n\n        button {\n            background-color: var(--gold-accent);\n            color: var(--dark-velvet);\n            padding: 15px 25px;\n            border: none;\n            border-radius: 5px;\n            font-size: 1.2rem;\n            font-weight: bold;\n            cursor: pointer;\n            transition: background-color 0.3s ease, transform 0.2s ease;\n            width: fit-content;\n            margin-top: 1rem;\n            justify-self: center;\n        }\n\n        button:hover {\n            background-color: #d4af37;\n            transform: translateY(-2px);\n        }\n\n        #tool-result {\n            margin-top: 2.5rem;\n            padding: 2rem;\n            background-color: #fff;\n            border-radius: 8px;\n            box-shadow: var(--shadow-subtle);\n            border: 1px solid var(--matte-gray);\n            color: var(--text-color);\n        }\n\n        #tool-result h3 {\n            font-family: 'Playfair Display', serif;\n            color: var(--dark-velvet);\n            font-size: 2rem;\n            margin-bottom: 1.5rem;\n            text-align: center;\n        }\n\n        .result-item {\n            display: flex;\n            align-items: flex-start;\n            margin-bottom: 1.5rem;\n            padding-bottom: 1.5rem;\n            border-bottom: 1px dashed var(--matte-gray);\n        }\n\n        .result-item:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n            padding-bottom: 0;\n        }\n\n        .result-logo {\n            flex-shrink: 0;\n            width: 80px;\n            height: 80px;\n            background-color: var(--dark-velvet);\n            color: var(--gold-accent);\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            font-weight: bold;\n            font-size: 1.5rem;\n            border-radius: 50%;\n            margin-right: 1.5rem;\n            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        }\n\n        .result-details {\n            flex-grow: 1;\n        }\n\n        .result-details h4 {\n            font-family: 'Playfair Display', serif;\n            color: var(--gold-accent);\n            margin-top: 0;\n            margin-bottom: 0.5rem;\n            font-size: 1.4rem;\n        }\n\n        .result-details p {\n            margin-bottom: 0.5rem;\n        }\n\n        .result-details ul {\n            list-style: none;\n            padding: 0;\n            margin-top: 0.5rem;\n        }\n\n        .result-details ul li {\n            background-color: var(--matte-gray);\n            padding: 5px 10px;\n            border-radius: 3px;\n            display: inline-block;\n            margin-right: 8px;\n            margin-bottom: 8px;\n            font-size: 0.9em;\n            color: var(--dark-velvet);\n        }\n\n        .cta-section {\n            text-align: center;\n            padding: 3rem 2.5rem;\n            background-color: var(--dark-velvet);\n            color: var(--light-cream);\n            border-radius: 8px;\n            box-shadow: var(--shadow-subtle);\n            margin-top: 2rem;\n        }\n\n        .cta-section h2 {\n            color: var(--gold-accent);\n            margin-bottom: 1.5rem;\n        }\n\n        .cta-section p {\n            font-size: 1.2rem;\n            margin-bottom: 2rem;\n        }\n\n        .cta-section button {\n            background-color: var(--gold-accent);\n            color: var(--dark-velvet);\n            padding: 18px 35px;\n            font-size: 1.3rem;\n            border-radius: 7px;\n        }\n\n        .seo-section {\n            background-color: var(--light-cream);\n            padding: 3rem 2.5rem;\n            border-top: 1px solid var(--matte-gray);\n            margin-top: 3rem;\n            text-align: center;\n        }\n\n        .seo-section h2 {\n            color: var(--dark-velvet);\n            font-size: 2rem;\n            margin-bottom: 1.5rem;\n        }\n\n        .seo-section p {\n            max-width: 900px;\n            margin: 1rem auto;\n            color: #555;\n            font-size: 1rem;\n            text-align: left;\n        }\n\n        .seo-section ul {\n            list-style: none;\n            padding: 0;\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: center;\n            margin-top: 2rem;\n        }\n\n        .seo-section ul li {\n            background-color: #fff;\n            border: 1px solid var(--gold-accent);\n            padding: 8px 15px;\n            margin: 8px;\n            border-radius: 20px;\n            font-size: 0.9em;\n            color: var(--dark-velvet);\n            transition: background-color 0.3s ease;\n        }\n\n        .seo-section ul li:hover {\n            background-color: var(--gold-accent);\n            color: var(--light-cream);\n        }\n\n        footer {\n            background-color: var(--dark-velvet);\n            color: var(--matte-gray);\n            text-align: center;\n            padding: 1.5rem;\n            font-size: 0.9rem;\n            margin-top: auto;\n        }\n\n        @media (max-width: 768px) {\n            header h1 {\n                font-size: 2.5rem;\n            }\n            header p {\n                font-size: 1.1rem;\n            }\n            h2 {\n                font-size: 2rem;\n            }\n            section {\n                padding: 1.5rem;\n            }\n            .result-item {\n                flex-direction: column;\n                align-items: center;\n                text-align: center;\n            }\n            .result-logo {\n                margin-right: 0;\n                margin-bottom: 1rem;\n            }\n            .result-details ul li {\n                margin-right: 5px;\n                margin-bottom: 5px;\n            }\n            .seo-section ul {\n                flex-direction: column;\n                align-items: center;\n            }\n            .seo-section ul li {\n                width: 80%;\n                text-align: center;\n            }\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://outil-d-analyse-comparative-des-services-de-con-b15a5928.onrender.com\">\n    <meta property=\"og:title\" content=\"Outil d&#x27;Analyse Comparative des Services de Conciergerie de Luxe\">\n    <meta property=\"og:description\" content=\"Comparez les forfaits et les services offerts par les conciergeries de luxe en France pour faire un choix éclairé.\">\n    <meta property=\"og:url\" content=\"https://outil-d-analyse-comparative-des-services-de-con-b15a5928.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Outil d'Analyse Comparative des Services de Conciergerie de Luxe\", \"description\": \"Comparez les forfaits et les services offerts par les conciergeries de luxe en France pour faire un choix éclairé.\", \"url\": \"https://outil-d-analyse-comparative-des-services-de-con-b15a5928.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"outil-d-analyse-comparative-des-services-de-con-b15a5928\" data-runtime-mode=\"analysis_tool\">\n    <header>\n        <h1>Votre Guide Éclairé des Conciergeries de Luxe</h1>\n        <p>Découvrez, comparez et choisissez la conciergerie haut de gamme qui correspond parfaitement à vos exigences en France.</p>\n    </header>\n\n    <div class=\"container\">\n        <section class=\"tool-section\">\n            <h2>Comparez les Services de Conciergerie de Luxe</h2>\n            <p style=\"text-align: center; color: var(--matte-gray); font-size: 1.1em; margin-bottom: 2rem;\">Saisissez vos critères et laissez notre outil affiner votre recherche parmi les prestataires d'exception.</p>\n            <form id=\"tool-form\">\n                <div class=\"form-group\">\n                    <label for=\"budget\">Budget mensuel estimé (€) :</label>\n                    <input type=\"number\" id=\"budget\" name=\"budget\" min=\"500\" max=\"10000\" step=\"100\" value=\"1500\" required>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"services\">Services prioritaires :</label>\n                    <select id=\"services\" name=\"services\" required>\n                        <option value=\"voyage\">Organisation de voyages sur mesure</option>\n                        <option value=\"evenement\">Événements privés & réceptions</option>\n                        <option value=\"immobilier\">Gestion immobilière & résidentielle</option>\n                        <option value=\"quotidien\">Assistance au quotidien & Lifestyle</option>\n                        <option value=\"securite\">Sécurité & Protection rapprochée</option>\n                        <option value=\"tout\">Tous les services (gestion complète)</option>\n                    </select>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"zone\">Zone géographique de couverture :</label>\n                    <select id=\"zone\" name=\"zone\" required>\n                        <option value=\"paris\">Paris & Île-de-France</option>\n                        <option value=\"cote-azur\">Côte d'Azur & Monaco</option>\n                        <option value=\"alpes\">Alpes & Stations de ski</option>\n                        <option value=\"grand-ouest\">Grand Ouest (Bordeaux, Nantes)</option>\n                        <option value=\"nationale\">Couverture nationale</option>\n                        <option value=\"internationale\">Couverture internationale</option>\n                    </select>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"type_client\">Type de client (optionnel) :</label>\n                    <select id=\"type_client\" name=\"type_client\">\n                        <option value=\"particulier\">Clientèle privée</option>\n                        <option value=\"entreprise\">Clientèle corporate</option>\n                        <option value=\"celebrites\">Personnalités publiques</option>\n                        <option value=\"famille\">Familles (services dédiés)</option>\n                    </select>\n                </div>\n                <button type=\"submit\" id=\"tool-submit\" data-affiliate-slot=\"compare-concierge\">Analyser les Offres</button>\n            </form>\n\n            <div id=\"tool-result\">\n                <h3 id=\"result-headline\">Résultats de votre comparaison personnalisée</h3>\n                <p style=\"text-align: center; color: #666; margin-bottom: 2rem;\">Veuillez remplir le formulaire pour découvrir les conciergeries les plus adaptées à vos besoins.</p>\n            </div>\n        </section>\n\n        <section>\n            <h2>Pourquoi comparer avec notre outil ?</h2>\n            <div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;\">\n                <div style=\"background-color: var(--light-cream); padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;\">\n                    <h3 style=\"color: var(--gold-accent); margin-top: 0; font-family: 'Playfair Display', serif;\">Transparence</h3>\n                    <p>Accédez à des informations claires sur les coûts et les services pour éviter les mauvaises surprises.</p>\n                </div>\n                <div style=\"background-color: var(--light-cream); padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;\">\n                    <h3 style=\"color: var(--gold-accent); margin-top: 0; font-family: 'Playfair Display', serif;\">Précision</h3>\n                    <p>Notre algorithme prend en compte vos critères spécifiques pour des correspondances pertinentes.</p>\n                </div>\n                <div style=\"background-color: var(--light-cream); padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;\">\n                    <h3 style=\"color: var(--gold-accent); margin-top: 0; font-family: 'Playfair Display', serif;\">Gain de temps</h3>\n                    <p>Finies les recherches fastidieuses. Trouvez l'excellence en quelques clics.</p>\n                </div>\n            </div>\n        </section>\n\n        <section class=\"cta-section\">\n            <h2>Prêt à trouver votre partenaire de prestige ?</h2>\n            <p>Ne laissez plus le choix d'une conciergerie de luxe au hasard. Obtenez une vue d'ensemble instantanée et prenez la meilleure décision.</p>\n            <button data-affiliate-slot=\"start-comparison\">Démarrer la Comparaison</button>\n        </section>\n    </div>\n\n    <div class=\"seo-section\">\n        <h2>Optimisez votre choix de conciergerie de luxe en France</h2>\n        <p>Vous recherchez le service de conciergerie le plus adapté à vos exigences de luxe et de discrétion en France ? Notre plateforme est conçue pour les clients les plus exigeants, cherchant à comparer efficacement les prestations, les tarifs et les zones de couverture des meilleures conciergeries privées et corporate. Que vous soyez à Paris, sur la Côte d'Azur, dans les Alpes ou partout ailleurs en France, trouver la conciergerie sur mesure n'a jamais été aussi simple. Découvrez les spécialistes des voyages de luxe, de l'organisation d'événements exclusifs, de la gestion immobilière haut de gamme ou de l'assistance lifestyle quotidienne.</p>\n        <p>Notre outil d'analyse comparative met en lumière les différences entre les forfaits de conciergerie, les services inclus, les coûts cachés et les spécialisations de chaque agence. Que votre budget soit de 1000€ ou 5000€ par mois, nous vous aidons à identifier le prestataire qui offre le meilleur rapport qualité-prix pour une clientèle VIP. Évitez les compromis et assurez-vous un service irréprochable et personnalisé. Utilisez notre comparateur pour affiner votre sélection et bénéficier d'une assistance haut de gamme sans égale.</p>\n        <ul>\n            <li>Comparateur conciergerie de luxe Paris</li>\n            <li>Meilleure conciergerie privée France</li>\n            <li>Tarifs conciergerie haut de gamme</li>\n            <li>Services conciergerie prestige Côte d'Azur</li>\n            <li>Gestion immobilière conciergerie luxe</li>\n            <li>Assistance lifestyle VIP France</li>\n            <li>Organisation voyage sur mesure conciergerie</li>\n            <li>Conciergerie corporate France</li>\n            <li>Choisir conciergerie exclusive</li>\n            <li>Analyse offres conciergerie privée</li>\n        </ul>\n    </div>\n\n    <footer>\n        &copy; 2023 Comparateur Conciergerie. Tous droits réservés.\n    </footer>\n\n    <script>\n        document.addEventListener('DOMContentLoaded', () => {\n            const form = document.getElementById('tool-form');\n            const resultDiv = document.getElementById('tool-result');\n\n            const conciergeriesData = [\n                {\n                    name: \"Prestige Services\",\n                    logo: \"PS\",\n                    minBudget: 1200,\n                    maxBudget: 6000,\n                    services: [\"voyage\", \"evenement\", \"immobilier\", \"quotidien\"],\n                    zones: [\"paris\", \"cote-azur\", \"nationale\"],\n                    clientTypes: [\"particulier\", \"entreprise\", \"celebrites\"],\n                    specialties: [\"Voyages sur mesure\", \"Accès exclusifs\", \"Gestion de propriétés\"],\n                    description: \"Spécialiste de l'accompagnement personnalisé pour une clientèle exigeante, avec un réseau étendu.\"\n                },\n                {\n                    name: \"Élite Conciergerie France\",\n                    logo: \"ECF\",\n                    minBudget: 800,\n                    maxBudget: 4000,\n                    services: [\"voyage\", \"quotidien\", \"evenement\"],\n                    zones: [\"paris\", \"grand-ouest\", \"nationale\"],\n                    clientTypes: [\"particulier\", \"famille\"],\n                    specialties: [\"Optimisation du quotidien\", \"Expériences familiales\", \"Réservations de dernière minute\"],\n                    description: \"Un service réactif et discret, parfait pour la gestion des agendas chargés et des besoins familiaux.\"\n                },\n                {\n                    name: \"Azure Exclusive\",\n                    logo: \"AE\",\n                    minBudget: 1500,\n                    maxBudget: 8000,\n                    services: [\"immobilier\", \"evenement\", \"securite\"],\n                    zones: [\"cote-azur\", \"alpes\"],\n                    clientTypes: [\"particulier\", \"entreprise\", \"celebrites\"],\n                    specialties: [\"Gestion de villas de luxe\", \"Événements Côte d'Azur\", \"Protection VIP\"],\n                    description: \"Le partenaire idéal pour une vie sans souci sur la Côte d'Azur et dans les stations alpines.\"\n                },\n                {\n                    name: \"Maître de Maison Privé\",\n                    logo: \"MMP\",\n                    minBudget: 2000,\n                    maxBudget: 10000,\n                    services: [\"tout\"],\n                    zones: [\"paris\", \"internationale\"],\n                    clientTypes: [\"particulier\", \"celebrites\"],\n                    specialties: [\"Gestion complète et intégrée\", \"Conseil stratégique\", \"Excellence globale\"],\n                    description: \"Une conciergerie ultra-personnalisée offrant une gestion complète et une attention inégalée.\"\n                },\n                {\n                    name: \"Alpine Prestige\",\n                    logo: \"AP\",\n                    minBudget: 900,\n                    maxBudget: 5000,\n                    services: [\"voyage\", \"immobilier\", \"evenement\"],\n                    zones: [\"alpes\"],\n                    clientTypes: [\"particulier\", \"famille\"],\n                    specialties: [\"Séjours au ski\", \"Location de chalets\", \"Activités montagne\"],\n                    description: \"Spécialiste des expériences de luxe en montagne, pour des séjours inoubliables.\"\n                }\n            ];\n\n            form.addEventListener('submit', (e) => {\n                e.preventDefault();\n\n                const budget = parseInt(document.getElementById('budget').value);\n                const services = document.getElementById('services').value;\n                const zone = document.getElementById('zone').value;\n                const typeClient = document.getElementById('type_client').value;\n\n                const filteredResults = conciergeriesData.filter(concierge => {\n                    const budgetMatch = budget >= concierge.minBudget && budget <= concierge.maxBudget;\n                    const servicesMatch = concierge.services.includes(services) || services === \"tout\" || concierge.services.includes(\"tout\");\n                    const zoneMatch = concierge.zones.includes(zone) || zone === \"nationale\" || zone === \"internationale\" && concierge.zones.includes(\"nationale\") || concierge.zones.includes(\"internationale\");\n                    const clientTypeMatch = typeClient === \"\" || concierge.clientTypes.includes(typeClient);\n\n                    return budgetMatch && servicesMatch && zoneMatch && clientTypeMatch;\n                });\n\n                displayResults(filteredResults);\n            });\n\n            function displayResults(results) {\n                resultDiv.innerHTML = ''; // Clear previous results\n                const heading = document.createElement('h3');\n                heading.textContent = 'Résultats de votre comparaison personnalisée';\n                resultDiv.appendChild(heading);\n\n                if (results.length === 0) {\n                    const noResults = document.createElement('p');\n                    noResults.style.textAlign = 'center';\n                    noResults.style.color = '#666';\n                    noResults.textContent = \"Aucune conciergerie ne correspond exactement à vos critères. Essayez d'ajuster vos préférences.\";\n                    resultDiv.appendChild(noResults);\n                } else {\n                    results.forEach(concierge => {\n                        const item = document.createElement('div');\n                        item.classList.add('result-item');\n\n                        const logo = document.createElement('div');\n                        logo.classList.add('result-logo');\n                        logo.textContent = concierge.logo;\n                        item.appendChild(logo);\n\n                        const details = document.createElement('div');\n                        details.classList.add('result-details');\n\n                        const name = document.createElement('h4');\n                        name.textContent = concierge.name;\n                        details.appendChild(name);\n\n                        const description = document.createElement('p');\n                        description.textContent = concierge.description;\n                        details.appendChild(description);\n\n                        const budgetInfo = document.createElement('p');\n                        budgetInfo.innerHTML = `<strong>Budget indicatif :</strong> ${concierge.minBudget}€ - ${concierge.maxBudget}€/mois`;\n                        details.appendChild(budgetInfo);\n\n                        const specialitesList = document.createElement('ul');\n                        concierge.specialties.forEach(spec => {\n                            const li = document.createElement('li');\n                            li.textContent = spec;\n                            specialitesList.appendChild(li);\n                        });\n                        details.appendChild(specialitesList);\n                        \n                        item.appendChild(details);\n                        resultDiv.appendChild(item);\n                    });\n                }\n                resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });\n            }\n\n            // Smooth scroll for CTA buttons\n            document.querySelectorAll('button[data-affiliate-slot]').forEach(button => {\n                button.addEventListener('click', () => {\n                    if (button.id !== 'tool-submit') { // Only for secondary CTAs\n                         document.getElementById('tool-form').scrollIntoView({ behavior: 'smooth', block: 'start' });\n                    }\n                });\n            });\n\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
