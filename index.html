@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil d&#x27;Analyse Comparative des Services de Conciergerie de Luxe | Comparez les Services de Conciergerie de Luxe</title>
+    <meta name="description" content="Comparez les forfaits et les services offerts par les conciergeries de luxe en France pour faire un choix éclairé.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --dark-velvet: #2a2a2a;
+            --gold-accent: #b8860b;
+            --light-cream: #f8f8f8;
+            --matte-gray: #e0e0e0;
+            --text-color: #333;
+            --shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-cream);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--dark-velvet);
+            color: var(--light-cream);
+            padding: 2.5rem 5%;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--gold-accent);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--matte-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2%;
+            flex-grow: 1;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--matte-gray);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-velvet);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold-accent);
+        }
+
+        .tool-section {
+            background-color: var(--dark-velvet);
+            color: var(--light-cream);
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .tool-section h2 {
+            color: var(--gold-accent);
+        }
+
+        form {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--matte-gray);
+            font-size: 1.1rem;
+        }
+
+        input[type="number"],
+        select,
+        textarea {
+            padding: 12px 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #3a3a3a;
+            color: var(--light-cream);
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        input[type="number"]::placeholder,
+        textarea::placeholder {
+            color: #ccc;
+        }
+
+        button {
+            background-color: var(--gold-accent);
+            color: var(--dark-velvet);
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: fit-content;
+            margin-top: 1rem;
+            justify-self: center;
+        }
+
+        button:hover {
+            background-color: #d4af37;
+            transform: translateY(-2px);
+        }
+
+        #tool-result {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--matte-gray);
+            color: var(--text-color);
+        }
+
+        #tool-result h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-velvet);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .result-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--matte-gray);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .result-logo {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background-color: var(--dark-velvet);
+            color: var(--gold-accent);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-details {
+            flex-grow: 1;
+        }
+
+        .result-details h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold-accent);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .result-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        .result-details ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+
+        .result-details ul li {
+            background-color: var(--matte-gray);
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: var(--dark-velvet);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2.5rem;
+            background-color: var(--dark-velvet);
+            color: var(--light-cream);
+            border-radius: 8px;
+            box-shadow: var(--shadow-subtle);
+            margin-top: 2rem;
+        }
+
+        .cta-section h2 {
+            color: var(--gold-accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section button {
+            background-color: var(--gold-accent);
+            color: var(--dark-velvet);
+            padding: 18px 35px;
+            font-size: 1.3rem;
+            border-radius: 7px;
+        }
+
+        .seo-section {
+            background-color: var(--light-cream);
+            padding: 3rem 2.5rem;
+            border-top: 1px solid var(--matte-gray);
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .seo-section h2 {
+            color: var(--dark-velvet);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .seo-section p {
+            max-width: 900px;
+            margin: 1rem auto;
+            color: #555;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .seo-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .seo-section ul li {
+            background-color: #fff;
+            border: 1px solid var(--gold-accent);
+            padding: 8px 15px;
+            margin: 8px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: var(--dark-velvet);
+            transition: background-color 0.3s ease;
+        }
+
+        .seo-section ul li:hover {
+            background-color: var(--gold-accent);
+            color: var(--light-cream);
+        }
+
+        footer {
+            background-color: var(--dark-velvet);
+            color: var(--matte-gray);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 1.5rem;
+            }
+            .result-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .result-logo {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            .result-details ul li {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            .seo-section ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .seo-section ul li {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://outil-d-analyse-comparative-des-services-de-con-b15a5928.onrender.com">
+    <meta property="og:title" content="Outil d&#x27;Analyse Comparative des Services de Conciergerie de Luxe">
+    <meta property="og:description" content="Comparez les forfaits et les services offerts par les conciergeries de luxe en France pour faire un choix éclairé.">
+    <meta property="og:url" content="https://outil-d-analyse-comparative-des-services-de-con-b15a5928.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Outil d'Analyse Comparative des Services de Conciergerie de Luxe", "description": "Comparez les forfaits et les services offerts par les conciergeries de luxe en France pour faire un choix éclairé.", "url": "https://outil-d-analyse-comparative-des-services-de-con-b15a5928.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="outil-d-analyse-comparative-des-services-de-con-b15a5928" data-runtime-mode="analysis_tool">
+    <header>
+        <h1>Votre Guide Éclairé des Conciergeries de Luxe</h1>
+        <p>Découvrez, comparez et choisissez la conciergerie haut de gamme qui correspond parfaitement à vos exigences en France.</p>
+    </header>
+
+    <div class="container">
+        <section class="tool-section">
+            <h2>Comparez les Services de Conciergerie de Luxe</h2>
+            <p style="text-align: center; color: var(--matte-gray); font-size: 1.1em; margin-bottom: 2rem;">Saisissez vos critères et laissez notre outil affiner votre recherche parmi les prestataires d'exception.</p>
+            <form id="tool-form">
+                <div class="form-group">
+                    <label for="budget">Budget mensuel estimé (€) :</label>
+                    <input type="number" id="budget" name="budget" min="500" max="10000" step="100" value="1500" required>
+                </div>
+                <div class="form-group">
+                    <label for="services">Services prioritaires :</label>
+                    <select id="services" name="services" required>
+                        <option value="voyage">Organisation de voyages sur mesure</option>
+                        <option value="evenement">Événements privés & réceptions</option>
+                        <option value="immobilier">Gestion immobilière & résidentielle</option>
+                        <option value="quotidien">Assistance au quotidien & Lifestyle</option>
+                        <option value="securite">Sécurité & Protection rapprochée</option>
+                        <option value="tout">Tous les services (gestion complète)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zone">Zone géographique de couverture :</label>
+                    <select id="zone" name="zone" required>
+                        <option value="paris">Paris & Île-de-France</option>
+                        <option value="cote-azur">Côte d'Azur & Monaco</option>
+                        <option value="alpes">Alpes & Stations de ski</option>
+                        <option value="grand-ouest">Grand Ouest (Bordeaux, Nantes)</option>
+                        <option value="nationale">Couverture nationale</option>
+                        <option value="internationale">Couverture internationale</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="type_client">Type de client (optionnel) :</label>
+                    <select id="type_client" name="type_client">
+                        <option value="particulier">Clientèle privée</option>
+                        <option value="entreprise">Clientèle corporate</option>
+                        <option value="celebrites">Personnalités publiques</option>
+                        <option value="famille">Familles (services dédiés)</option>
+                    </select>
+                </div>
+                <button type="submit" id="tool-submit" data-affiliate-slot="compare-concierge">Analyser les Offres</button>
+            </form>
+
+            <div id="tool-result">
+                <h3 id="result-headline">Résultats de votre comparaison personnalisée</h3>
+                <p style="text-align: center; color: #666; margin-bottom: 2rem;">Veuillez remplir le formulaire pour découvrir les conciergeries les plus adaptées à vos besoins.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pourquoi comparer avec notre outil ?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background-color: var(--light-cream); padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;">
+                    <h3 style="color: var(--gold-accent); margin-top: 0; font-family: 'Playfair Display', serif;">Transparence</h3>
+                    <p>Accédez à des informations claires sur les coûts et les services pour éviter les mauvaises surprises.</p>
+                </div>
+                <div style="background-color: var(--light-cream); padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;">
+                    <h3 style="color: var(--gold-accent); margin-top: 0; font-family: 'Playfair Display', serif;">Précision</h3>
+                    <p>Notre algorithme prend en compte vos critères spécifiques pour des correspondances pertinentes.</p>
+                </div>
+                <div style="background-color: var(--light-cream); padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;">
+                    <h3 style="color: var(--gold-accent); margin-top: 0; font-family: 'Playfair Display', serif;">Gain de temps</h3>
+                    <p>Finies les recherches fastidieuses. Trouvez l'excellence en quelques clics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Prêt à trouver votre partenaire de prestige ?</h2>
+            <p>Ne laissez plus le choix d'une conciergerie de luxe au hasard. Obtenez une vue d'ensemble instantanée et prenez la meilleure décision.</p>
+            <button data-affiliate-slot="start-comparison">Démarrer la Comparaison</button>
+        </section>
+    </div>
+
+    <div class="seo-section">
+        <h2>Optimisez votre choix de conciergerie de luxe en France</h2>
+        <p>Vous recherchez le service de conciergerie le plus adapté à vos exigences de luxe et de discrétion en France ? Notre plateforme est conçue pour les clients les plus exigeants, cherchant à comparer efficacement les prestations, les tarifs et les zones de couverture des meilleures conciergeries privées et corporate. Que vous soyez à Paris, sur la Côte d'Azur, dans les Alpes ou partout ailleurs en France, trouver la conciergerie sur mesure n'a jamais été aussi simple. Découvrez les spécialistes des voyages de luxe, de l'organisation d'événements exclusifs, de la gestion immobilière haut de gamme ou de l'assistance lifestyle quotidienne.</p>
+        <p>Notre outil d'analyse comparative met en lumière les différences entre les forfaits de conciergerie, les services inclus, les coûts cachés et les spécialisations de chaque agence. Que votre budget soit de 1000€ ou 5000€ par mois, nous vous aidons à identifier le prestataire qui offre le meilleur rapport qualité-prix pour une clientèle VIP. Évitez les compromis et assurez-vous un service irréprochable et personnalisé. Utilisez notre comparateur pour affiner votre sélection et bénéficier d'une assistance haut de gamme sans égale.</p>
+        <ul>
+            <li>Comparateur conciergerie de luxe Paris</li>
+            <li>Meilleure conciergerie privée France</li>
+            <li>Tarifs conciergerie haut de gamme</li>
+            <li>Services conciergerie prestige Côte d'Azur</li>
+            <li>Gestion immobilière conciergerie luxe</li>
+            <li>Assistance lifestyle VIP France</li>
+            <li>Organisation voyage sur mesure conciergerie</li>
+            <li>Conciergerie corporate France</li>
+            <li>Choisir conciergerie exclusive</li>
+            <li>Analyse offres conciergerie privée</li>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2023 Comparateur Conciergerie. Tous droits réservés.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('tool-form');
+            const resultDiv = document.getElementById('tool-result');
+
+            const conciergeriesData = [
+                {
+                    name: "Prestige Services",
+                    logo: "PS",
+                    minBudget: 1200,
+                    maxBudget: 6000,
+                    services: ["voyage", "evenement", "immobilier", "quotidien"],
+                    zones: ["paris", "cote-azur", "nationale"],
+                    clientTypes: ["particulier", "entreprise", "celebrites"],
+                    specialties: ["Voyages sur mesure", "Accès exclusifs", "Gestion de propriétés"],
+                    description: "Spécialiste de l'accompagnement personnalisé pour une clientèle exigeante, avec un réseau étendu."
+                },
+                {
+                    name: "Élite Conciergerie France",
+                    logo: "ECF",
+                    minBudget: 800,
+                    maxBudget: 4000,
+                    services: ["voyage", "quotidien", "evenement"],
+                    zones: ["paris", "grand-ouest", "nationale"],
+                    clientTypes: ["particulier", "famille"],
+                    specialties: ["Optimisation du quotidien", "Expériences familiales", "Réservations de dernière minute"],
+                    description: "Un service réactif et discret, parfait pour la gestion des agendas chargés et des besoins familiaux."
+                },
+                {
+                    name: "Azure Exclusive",
+                    logo: "AE",
+                    minBudget: 1500,
+                    maxBudget: 8000,
+                    services: ["immobilier", "evenement", "securite"],
+                    zones: ["cote-azur", "alpes"],
+                    clientTypes: ["particulier", "entreprise", "celebrites"],
+                    specialties: ["Gestion de villas de luxe", "Événements Côte d'Azur", "Protection VIP"],
+                    description: "Le partenaire idéal pour une vie sans souci sur la Côte d'Azur et dans les stations alpines."
+                },
+                {
+                    name: "Maître de Maison Privé",
+                    logo: "MMP",
+                    minBudget: 2000,
+                    maxBudget: 10000,
+                    services: ["tout"],
+                    zones: ["paris", "internationale"],
+                    clientTypes: ["particulier", "celebrites"],
+                    specialties: ["Gestion complète et intégrée", "Conseil stratégique", "Excellence globale"],
+                    description: "Une conciergerie ultra-personnalisée offrant une gestion complète et une attention inégalée."
+                },
+                {
+                    name: "Alpine Prestige",
+                    logo: "AP",
+                    minBudget: 900,
+                    maxBudget: 5000,
+                    services: ["voyage", "immobilier", "evenement"],
+                    zones: ["alpes"],
+                    clientTypes: ["particulier", "famille"],
+                    specialties: ["Séjours au ski", "Location de chalets", "Activités montagne"],
+                    description: "Spécialiste des expériences de luxe en montagne, pour des séjours inoubliables."
+                }
+            ];
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const budget = parseInt(document.getElementById('budget').value);
+                const services = document.getElementById('services').value;
+                const zone = document.getElementById('zone').value;
+                const typeClient = document.getElementById('type_client').value;
+
+                const filteredResults = conciergeriesData.filter(concierge => {
+                    const budgetMatch = budget >= concierge.minBudget && budget <= concierge.maxBudget;
+                    const servicesMatch = concierge.services.includes(services) || services === "tout" || concierge.services.includes("tout");
+                    const zoneMatch = concierge.zones.includes(zone) || zone === "nationale" || zone === "internationale" && concierge.zones.includes("nationale") || concierge.zones.includes("internationale");
+                    const clientTypeMatch = typeClient === "" || concierge.clientTypes.includes(typeClient);
+
+                    return budgetMatch && servicesMatch && zoneMatch && clientTypeMatch;
+                });
+
+                displayResults(filteredResults);
+            });
+
+            function displayResults(results) {
+                resultDiv.innerHTML = ''; // Clear previous results
+                const heading = document.createElement('h3');
+                heading.textContent = 'Résultats de votre comparaison personnalisée';
+                resultDiv.appendChild(heading);
+
+                if (results.length === 0) {
+                    const noResults = document.createElement('p');
+                    noResults.style.textAlign = 'center';
+                    noResults.style.color = '#666';
+                    noResults.textContent = "Aucune conciergerie ne correspond exactement à vos critères. Essayez d'ajuster vos préférences.";
+                    resultDiv.appendChild(noResults);
+                } else {
+                    results.forEach(concierge => {
+                        const item = document.createElement('div');
+                        item.classList.add('result-item');
+
+                        const logo = document.createElement('div');
+                        logo.classList.add('result-logo');
+                        logo.textContent = concierge.logo;
+                        item.appendChild(logo);
+
+                        const details = document.createElement('div');
+                        details.classList.add('result-details');
+
+                        const name = document.createElement('h4');
+                        name.textContent = concierge.name;
+                        details.appendChild(name);
+
+                        const description = document.createElement('p');
+                        description.textContent = concierge.description;
+                        details.appendChild(description);
+
+                        const budgetInfo = document.createElement('p');
+                        budgetInfo.innerHTML = `<strong>Budget indicatif :</strong> ${concierge.minBudget}€ - ${concierge.maxBudget}€/mois`;
+                        details.appendChild(budgetInfo);
+
+                        const specialitesList = document.createElement('ul');
+                        concierge.specialties.forEach(spec => {
+                            const li = document.createElement('li');
+                            li.textContent = spec;
+                            specialitesList.appendChild(li);
+                        });
+                        details.appendChild(specialitesList);
+                        
+                        item.appendChild(details);
+                        resultDiv.appendChild(item);
+                    });
+                }
+                resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Smooth scroll for CTA buttons
+            document.querySelectorAll('button[data-affiliate-slot]').forEach(button => {
+                button.addEventListener('click', () => {
+                    if (button.id !== 'tool-submit') { // Only for secondary CTAs
+                         document.getElementById('tool-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
